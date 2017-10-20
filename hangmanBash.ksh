@@ -3,10 +3,8 @@ echo "Welcome to Hangman Bash"
 words=("moon" "computer" "apple" "love" "New York")
 wordSelectedNumber=$(($RANDOM%5))
 stringASCII=""
-echo "word $wordSelectedNumber"
 for (( i=0 ; i<${#words[@]} ; i++ ))
 do
-echo "i=$i"
 	if [[ $i -eq "$wordSelectedNumber" ]]
 	 then
 		wordSelected="${words[$i]}"
@@ -94,7 +92,6 @@ do
 	fi 
 done
 done
-
 
 if [[ $wrong -eq 3 ]]
 	then
